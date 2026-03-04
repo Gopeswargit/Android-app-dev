@@ -1,0 +1,15 @@
+// devcontainer.json
+{
+  "name": "Android Studio with VNC",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "remoteUser": "vscode",
+  "forwardPorts": [5901], // VNC port
+  "postCreateCommand": "bash setup.sh",
+  "features": {
+    "ghcr.io/devcontainers/features/desktop-lite:1": {
+      "version": "latest"
+    }
+  }
+}
